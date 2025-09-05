@@ -1,0 +1,17 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container-padding {
+  padding: 4rem 0;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 992px) { @content; }
+  }
+}
